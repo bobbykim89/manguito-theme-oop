@@ -1,0 +1,29 @@
+{
+  "name": "ts-oop-practice",
+  "version": "0.1.0",
+  "description": "practice project for typescript oop",
+  "main": "index.ts",
+  "scripts": {
+    "bundle:watch": "webpack --watch",
+    "watch:dist": "concurrently \"webpack --watch\" \"nodemon ./dist/main.js\"",
+    "build:dev": "webpack --config webpack.config.js",
+    "serve:dist": "nodemon ./dist/main.js",
+    "run:dist": "node ./dist/main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bobby Kim",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.1.0",
+    "@types/nodemon": "^1.19.6",
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.4",
+    "ts-loader": "^9.5.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4",
+    "webpack": "^5.93.0",
+    "webpack-bundle-analyzer": "^4.10.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-node-externals": "^3.0.0"
+  }
+}
