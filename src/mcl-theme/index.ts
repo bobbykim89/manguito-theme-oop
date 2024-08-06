@@ -18,65 +18,6 @@ import type {
 } from '../theme/theme.types'
 import { ValidateMclClass } from '../validator'
 
-export const colorType = [
-  'BGCOLOR',
-  'BEFOREBG',
-  'AFTERBG',
-  'HVBGCOLOR',
-  'FCBGCOLOR',
-  'ACTIVEBG',
-  'TEXTCOLOR',
-  'HVTEXTCOLOR',
-  'FCTEXTCOLOR',
-  'DISABLEDTEXTCOLOR',
-  'SVGFILL',
-  'RINGCOLOR',
-  'FOCUSRING',
-  'ACTIVERING',
-  'OFFSETRING',
-  'BTNCOLOR',
-  'LISTCOLOR',
-  'BORDER',
-  'BORDERX',
-  'BORDERY',
-  'BORDERT',
-  'BORDERB',
-  'BORDERL',
-  'BORDERR',
-] as const
-
-export const textType = ['BODYTEXT', 'FONTWEIGHT', 'TEXTALIGN'] as const
-
-export const headingSizeType = ['H1', 'H2', 'H3', 'H4'] as const
-
-export const borderWidthType = [
-  'BORDERW',
-  'BORDERXW',
-  'BORDERYW',
-  'BORDERTW',
-  'BORDERBW',
-  'BORDERLW',
-  'BORDERRW',
-] as const
-export const scaleType = ['BGOPACITY', 'OPACITY'] as const
-export const spacingType = [
-  'MARGIN',
-  'MARGINX',
-  'MARGINY',
-  'MARGINT',
-  'MARGINB',
-  'MARGINL',
-  'MARGINR',
-  'PADDING',
-  'PADDINGX',
-  'PADDINGY',
-  'PADDINGT',
-  'PADDINGB',
-  'PADDINGL',
-  'PADDINGR',
-  'GAP',
-] as const
-
 export const typeGroup = {
   colorType: [
     'BGCOLOR',
@@ -348,8 +289,7 @@ export class MclClass<T extends ClassType> {
     if (this.isColorClass(this.classValue)) {
       return this.colorClass.bgColor[this.classValue]
     }
-    const mew = this.isColorClass(this.classValue) as unknown
-    return mew as string
+    return ' '
   }
   private getHoverBgColorClass(): string {
     if (!this.validator.validateColorType()) {
