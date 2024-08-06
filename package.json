@@ -4,6 +4,7 @@
   "description": "practice project for typescript oop",
   "main": "index.ts",
   "scripts": {
+    "build:tsc": "tsc",
     "bundle:watch": "webpack --watch",
     "watch:dist": "concurrently \"webpack --watch\" \"nodemon ./dist/main.js\"",
     "build:dev": "webpack --config webpack.config.js",

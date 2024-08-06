@@ -4,7 +4,7 @@ export type BorderWidth = {
   [key in Range<1, 12>]: string;
 };
 
-export class BorderWidthClass {
+export class MclBorderWidthClass {
   // Border width class
   public borderWidth: BorderWidth = {
     1: "border-[1px]",
